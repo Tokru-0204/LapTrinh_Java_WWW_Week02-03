@@ -38,6 +38,13 @@ public class Customer {
         this.address = address;
     }
 
+    public Customer(String name, String email, String phone, String address) {
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+    }
+
     public long getId() {
         return id;
     }

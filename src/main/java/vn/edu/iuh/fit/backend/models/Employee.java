@@ -52,6 +52,15 @@ public class Employee {
         this.status = status;
     }
 
+    public Employee(String fullname, LocalDate dob, String email, String phone, String address, EmployeeStatus status) {
+        this.fullname = fullname;
+        this.dob = dob;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.status = status;
+    }
+
     public long getId() {
         return id;
     }

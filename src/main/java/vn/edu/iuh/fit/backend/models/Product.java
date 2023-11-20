@@ -30,13 +30,16 @@ public class Product {
     @Column(name = "status")
     private ProductStatus status;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     @JoinColumn
     private List<ProductImage> productImageList = new ArrayList<>();
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
     @JoinColumn
     private List<OrderDetail> orderDetails = new ArrayList<>();
+    @OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+    @JoinColumn
+    private List<ProductPrice> productPrices = new ArrayList<>();
 
     public Product() {
     }
@@ -53,8 +56,8 @@ public class Product {
         return product_id;
     }
 
-    public void setProduct_id(long product_id) {
-        this.product_id = product_id;
+    public void setProduct_id(long id) {
+        this.product_id = id;
     }
 
     public String getName() {
@@ -113,10 +116,18 @@ public class Product {
         this.orderDetails = orderDetails;
     }
 
+    public List<ProductPrice> getProductPrices() {
+        return productPrices;
+    }
+
+    public void setProductPrices(List<ProductPrice> productPrices) {
+        this.productPrices = productPrices;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
-                "product_id=" + product_id +
+                "id=" + product_id +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", unit='" + unit + '\'' +

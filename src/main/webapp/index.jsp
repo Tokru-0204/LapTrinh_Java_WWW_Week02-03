@@ -1,12 +1,13 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-  <title>JSP - Hello World</title>
+  <title>Index</title>
 </head>
 <body>
-<h1><%= "Hello World!" %></h1>
+<a href="test.jsp">Insert new Employee</a> <br/>
+<a href="controls?action=cust_list">Customer listing</a> <br/>
+<a href="products.jsp">Product listing</a>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
+...
 </body>
 </html>

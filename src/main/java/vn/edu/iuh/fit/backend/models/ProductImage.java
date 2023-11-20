@@ -9,8 +9,6 @@ public class ProductImage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "image_id")
     private long image_id;
-    /*@Column(name = "product_id")
-    private long product_id;*/
     @Column(name = "path", length = 250, nullable = false)
     private String path;
     @Column(name = "alternative", length = 250)
@@ -28,6 +26,11 @@ public class ProductImage {
         this.path = path;
         this.alternative = alternative;
         this.product = product;
+    }
+
+    public ProductImage(String path, String alternative) {
+        this.path = path;
+        this.alternative = alternative;
     }
 
     public long getImage_id() {
