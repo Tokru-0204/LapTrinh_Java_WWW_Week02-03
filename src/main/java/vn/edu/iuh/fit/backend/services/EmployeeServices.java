@@ -18,7 +18,9 @@ public class EmployeeServices {
     public void insertEmp(Employee employee) {
         repository.insertEmp(employee);
     }
-
+    public  void updateEmp(Employee employee) {
+        repository.update(employee);
+    }
 
     public Optional<Employee> findById(long id) {
         return repository.findbyId(id);
@@ -29,6 +31,7 @@ public class EmployeeServices {
         if (op.isPresent()) {
             Employee employee = op.get();
             employee.setStatus(EmployeeStatus.TERMINATED);
+            repository.update(employee);
             return true;
         }
         return false;
@@ -52,4 +55,5 @@ public class EmployeeServices {
         //......
         return null;
     }
+
 }

@@ -6,7 +6,7 @@
         Name: <input name="name"/><br/>
         Description:<input name="desc"/><br/>
         Unit: <input name="unit"/><br/>
-        Manufacturer: <input name="manu"/><br/>
+        Manufacturer: <input name="menu"/><br/>
         Status:<select name="status">
         <option selected="true" label="ACTIVE" >ACTIVE</option>
         <option label="IN_ACTIVE">IN_ACTIVE</option>

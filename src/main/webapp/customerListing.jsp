@@ -1,7 +1,9 @@
 <%@ page import="vn.edu.iuh.fit.backend.services.CustomerServices" %>
 <%@ page import="vn.edu.iuh.fit.backend.models.Customer" %>
 <%@ page import="java.util.List" %>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,10 +13,8 @@
 <%
     CustomerServices services =new CustomerServices();
     List<Customer> lst = services.getAll();
-
-//        List<Customer> lst1 = session.getAttribute("customers");
 %>
- <table width="80%" align="center">
+ <table class="table table-hover">
     <tr>
         <th>ID</th>
         <th>Name</th>

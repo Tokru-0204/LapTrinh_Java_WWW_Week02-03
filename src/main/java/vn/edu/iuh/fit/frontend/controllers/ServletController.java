@@ -27,6 +27,9 @@ public class ServletController extends HttpServlet {
                 } else if (action.equals("insert_products")) {
                     ProductModel pm = new ProductModel();
                     pm.insertProduct(req, resp);
+                }else if (action.equals("update_emp")) {
+                    EmployeeModel empModel = new EmployeeModel();
+                    empModel.updateEmployee(req, resp);
                 }
 
             } else {
@@ -48,6 +51,13 @@ public class ServletController extends HttpServlet {
                 } else if (action.equals("delete_product")) {
                     ProductModel pm = new ProductModel();
                     pm.deleteProduct(req, resp);
+                } else if(action.equals("emp_list")) {
+                    resp.sendRedirect("employeeListing.jsp");
+                } else if (action.equals("del_emp")) {
+                    EmployeeModel emp = new EmployeeModel();
+                    emp.deleteEmployee(req, resp);
+                } else if (action.equals("prod_list")) {
+                    resp.sendRedirect("products.jsp");
                 }
             } else {
                 resp.sendRedirect("test.jsp");
